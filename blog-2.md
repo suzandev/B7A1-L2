@@ -1,13 +1,10 @@
 ---
-
 # 📝 `blog-2.md`
 
-```md
 # How Generics Enable Reusable and Type-Safe Code in TypeScript
 
 ## Introduction
 Generics are one of the most powerful features in TypeScript. They allow developers to create reusable components and functions that work with multiple data types while maintaining strict type safety. This reduces code duplication and improves scalability.
-
 ---
 
 ## What are Generics?
