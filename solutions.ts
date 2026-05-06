@@ -24,5 +24,14 @@ function checkType(value: StringOrNumber): string {
   }
 }
 
-console.log(checkType("Hello"));
-console.log(checkType(42));
+// console.log(checkType("Hello"));
+// console.log(checkType(42));
+
+//* Problem 4 solution */
+function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
+  return obj[key];
+}
+
+const user = { id: 1, name: "John Doe", age: 21 };
+getProperty(user, "name");
+console.log(getProperty(user, "name"));
