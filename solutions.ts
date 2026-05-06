@@ -24,9 +24,6 @@ function checkType(value: StringOrNumber): string {
   }
 }
 
-// console.log(checkType("Hello"));
-// console.log(checkType(42));
-
 //* Problem 4 solution */
 function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
   return obj[key];
@@ -34,7 +31,6 @@ function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
 
 const user = { id: 1, name: "John Doe", age: 21 };
 getProperty(user, "name");
-console.log(getProperty(user, "name"));
 
 //* Problem 5 solution */
 interface Book {
@@ -57,4 +53,33 @@ const myBook = {
 };
 
 toggleReadStatus(myBook);
-console.log(toggleReadStatus(myBook));
+
+//* Problem 6 solution */
+
+class Person {
+  name: string;
+  age: number;
+
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
+  }
+}
+
+class Student extends Person {
+  grade: string;
+
+  constructor(name: string, age: number, grade: string) {
+    super(name, age);
+    this.grade = grade;
+  }
+
+  getDetails(): string {
+    return `Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`;
+  }
+}
+
+const student = new Student("Alice", 20, "A");
+student.getDetails();
+
+console.log(student.getDetails());
