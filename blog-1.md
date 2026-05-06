@@ -12,3 +12,17 @@ When you declare a variable as `any`, TypeScript stops protecting you. You can a
 let data: any = "Hello";
 data(); // No error at compile time, but runtime crash
 ```
+
+## What is `unknown` ?
+
+The unknown type is a safer alternative to any. It allows any value but does not let you use it without checking its type first.
+
+```ts
+let value: unknown = "Hello";
+
+// value.toUpperCase(); ❌ Error
+
+if (typeof value === "string") {
+  console.log(value.toUpperCase()); // ✅ Safe
+}
+```
