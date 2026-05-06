@@ -1,6 +1,7 @@
-// just for checking.....
-function add(a: number, b: number): number {
-  return a + b;
+//* Problem 1 */
+
+function filterEvenNumbers(numbers: number[]): number[] {
+  return numbers.filter((num) => num % 2 === 0);
 }
 
-console.log(add(5, 3));
+console.log(filterEvenNumbers([1, 2, 3, 4, 5, 6]));
